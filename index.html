@@ -4,11 +4,183 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Movie DB</title>
     <link rel="stylesheet" href="src/style.css">
   </head>
   <body>
-    <h1>hello boy</h1>
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <div class="logo-circle green"></div>
+          <div class="logo-circle light-green"></div>
+        </div>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Discover</a>
+          <a href="#">Movie release</a>
+          <a href="#">Forum</a>
+          <a href="#">About</a>
+        </div>
+        <div class="nav-icons"></div>
+      </div>
+    </header>
+    <section class="hero">
+
+      <div class="slider-container">
+        <div class="slider">
+          <img class="hero-slider" src="/src/assets/img/pexels-christian-heitz-285904-842711.jpg" alt="image01">
+          <div class="movie-details">
+            <a href="#">
+              season3
+            </a>
+            <h2>The Movie title</h2>
+            <p class="date">2h40m &bullet; 2022 &bullet; Fantasy &bullet; Action</p>
+            <p>
+              The third season of the American television series The Mandalorian stars Pedro Pascal
+              as the title character, a bounty hunter traveling to Mandalore to redeem his past...
+            </p>
+            <div class="action-buttons">
+              <button>Play Now</button>
+              <button>Watch Trailer</button>
+              <button>Add Watchlist</button>
+            </div>
+          </div>
+        </div>
+        <!--first slider-->
+
+        <div class="slider">
+          <img class="hero-slider" src="/src/assets/img/pexels-iriser-1366957.jpg" alt="image01">
+          <div class="movie-details">
+            <a href="#">
+              season3
+            </a>
+            <h2>The Movie title</h2>
+            <p class="date">2h40m &bullet; 2022 &bullet; Fantasy &bullet; Action</p>
+            <p>
+              The third season of the American television series The Mandalorian stars Pedro Pascal
+              as the title character, a bounty hunter traveling to Mandalore to redeem his past...
+            </p>
+            <div class="action-buttons">
+              <button>Play Now</button>
+              <button>Watch Trailer</button>
+              <button>Add Watchlist</button>
+            </div>
+          </div>
+        </div>
+        <!--first slider-->
+
+        <div class="slider">
+          <img class="hero-slider" src="/src/assets/img/pexels-og-mpango-1582361-3041110.jpg" alt="image01">
+          <div class="movie-details">
+            <a href="#">
+              season3
+            </a>
+            <h2>The Movie title</h2>
+            <p class="date">2h40m &bullet; 2022 &bullet; Fantasy &bullet; Action</p>
+            <p>
+              The third season of the American television series The Mandalorian stars Pedro Pascal
+              as the title character, a bounty hunter traveling to Mandalore to redeem his past...
+            </p>
+            <div class="action-buttons">
+              <button>Play Now</button>
+              <button>Watch Trailer</button>
+              <button>Add Watchlist</button>
+            </div>
+          </div>
+        </div>
+        <!--first slider-->
+
+        <div class="slider">
+          <img class="hero-slider" src="/src/assets/img/pexels-pixabay-33045.jpg" alt="image01">
+          <div class="movie-details">
+            <a href="#">
+              season3
+            </a>
+            <h2>The Movie title</h2>
+            <p class="date">2h40m &bullet; 2022 &bullet; Fantasy &bullet; Action</p>
+            <p>
+              The third season of the American television series The Mandalorian stars Pedro Pascal
+              as the title character, a bounty hunter traveling to Mandalore to redeem his past...
+            </p>
+            <div class="action-buttons">
+              <button>Play Now</button>
+              <button>Watch Trailer</button>
+              <button>Add Watchlist</button>
+            </div>
+          </div>
+        </div>
+        <!--first slider-->
+
+        <!--Next and prev-->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(-1)">&#10094;</a>
+      </div>
+      <br>
+
+      <!--DOt circles-->
+      <div class="slide-circle">
+        <span class="dot" onclick="currentSlider(1)"></span>
+        <span class="dot" onclick="currentSlider(2)"></span>
+        <span class="dot" onclick="currentSlider(3)"></span>
+        <span class="dot" onclick="currentSlider(4)"></span>
+      </div>
+    </section>
+
+    <section class="sponsores">
+      <div class="sponsore-img">
+        <img class="sponsore" src="/src/assets/img/netflix.png" alt="netflix">
+        <img class="sponsore" src="/src/assets/img/microsoft.png" alt="mksoft">
+        <img class="sponsore" src="/src/assets/img/twitter.png" alt="twist">
+        <img class="sponsore" src="/src/assets/img/slack.png" alt="slack">
+      </div>
+    </section>
+
+    <section class="popular of the week"></section>
+    <section id="new-release" class="just-release">
+      <h3>Just-release</h3>
+      <div id="movie01" class="just-release-movie">
+
+      </div>
+
+        <div class="movie-card">
+          <img src="/src/assets/img/pexels-leofallflat-1567069.jpg" alt="hamit">
+          
+          <div class="movie-det">
+            <h4>Movie title</h4>
+            <span>rating</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+          </div>
+        </div>
+  
+        <div class="movie-card">
+          <img src="/src/assets/img/pexels-og-mpango-1582361-3041110.jpg" alt="hamit">
+
+          <div class="movie-det">
+            <h4>Movie title</h4>
+            <span>rating</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+          </div>
+        </div>
+  
+        <div class="movie-card">
+          <img src="/src/assets/img/pexels-eberhardgross-691668.jpg" alt="hamit">
+
+          <div class="movie-det">
+            <h4>Movie title</h4>
+            <span>rating</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="your watchlist"></section>
+    <section class="your likes"></section>
     <div id="app"></div>
     <script type="module" src="src/main.js"></script>
   </body>
