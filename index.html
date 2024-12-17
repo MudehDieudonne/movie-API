@@ -135,53 +135,67 @@
       </div>
     </section>
 
-    <section class="popular of the week"></section>
-    <section id="new-release" class="just-release">
-      <h3>Just-release</h3>
-      <div id="movie01" class="just-release-movie">
-
+  <section class="popular">
+      <div class="pop-title">
+        <h2>Popular of the Week</h2>
       </div>
+      <div class="pop-cards">
+        <div class="pop-card">
+          <div class="pop-num">
+            <h2>1</h2>
+          </div>
+          <div class="pop-img">
+            <img src="./src/assets/img/pexels-christian-heitz-285904-842711.jpg" alt="The Last of Us">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">The Last Of Us</h3>
+            <div class="card-genre">Horror • Thriller</div>
+            <div class="rating">
+              ★ 4.3 <span>| Movie</span>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </section> 
+    <section id="new-release" class="just-release">
+      <h2>Just-release</h2>
+      <div id="movie01" class="just-release-movie"></div>
 
-        <div class="movie-card">
-          <img src="/src/assets/img/pexels-leofallflat-1567069.jpg" alt="hamit">
+    </section>
+    <section class="your watchlist">
+      <h2>your watchlist</h2>
+      <div class="movie-container">
+        <div id = "movie02" class="movie-slider">
           
-          <div class="movie-det">
-            <h4>Movie title</h4>
-            <span>rating</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur
-            </p>
-          </div>
-        </div>
-  
-        <div class="movie-card">
-          <img src="/src/assets/img/pexels-og-mpango-1582361-3041110.jpg" alt="hamit">
-
-          <div class="movie-det">
-            <h4>Movie title</h4>
-            <span>rating</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur
-            </p>
-          </div>
-        </div>
-  
-        <div class="movie-card">
-          <img src="/src/assets/img/pexels-eberhardgross-691668.jpg" alt="hamit">
-
-          <div class="movie-det">
-            <h4>Movie title</h4>
-            <span>rating</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur
-            </p>
-          </div>
         </div>
       </div>
     </section>
-    <section class="your watchlist"></section>
-    <section class="your likes"></section>
-    <div id="app"></div>
+    <section class="like">
+      <h2>Your Likes</h2>
+      <div class="movie-slider03">
+        <button id="prevBtn" class="nav-btn">&#10094;</button>
+        <div class="movie-container03">
+          <div id="movie03" class="your-likes">
+            <!-- Movie cards will be dynamically added here -->
+          </div>
+        </div>
+        <button id="nextBtn" class="nav-btn">&#10095;</button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h4>
+            Our platform is trusted by millions & features best updated movies all around the world.
+          </h4>
+        </div>
+        <div class="footer-righ"></div>
+      </div>
+      <div class="copy-right">
+
+      </div>
+    </footer>
     <script type="module" src="src/main.js"></script>
   </body>
 </html>
