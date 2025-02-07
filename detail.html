@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/detail.css">
+    <title>Details</title>
+</head>
+<body>
+    <div class="card watchlist">
+        <div class="watchlist-img">
+          <img src="./src/assets/img/pexels-eberhardgross-691668.jpg" alt="gross">
+        </div>
+        <div class="watchlist-det">
+          <div class="overview">
+            Lorem ipsum dolor sit amet consectetur adipisicing 
+            elit. Mollitia veniam libero recusandae culpa? Nulla 
+            dolorem labore, voluptatum ad officia cumque.
+          </div>
+          <h4>Title</h4>
+          <div class="rating"> 5.4</div>
+        </div>
+      </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="./detail.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <div class="detail-container">
+    <div class="detail-poster">
+      <img id="detail-poster" src="" alt="Movie Poster">
+    </div>
+    <div class="detail-content">
+      <h1 id="detail-title"></h1>
+      <p id="detail-overview"></p>
+      <p><strong>Release Date:</strong> <span id="detail-release-date"></span></p>
+      <p><strong>Rating:</strong> <span id="detail-rating"></span></p>
+      <button id="back-button">Back to Home</button>
+    </div>
+  </div>
+
+  <script>
+    // Retrieve the movie data from localStorage
+ // Get the selected movie data from localStorage
+const selectedMovie = JSON.parse(localStorage.getItem('selectedMovie'));
+
+if (selectedMovie) {
+  const detailContainer = document.querySelector('.detail-container');
+
+  // Populate the detail page with movie data
+  detailContainer.innerHTML = `
+    <div class="movie-detail">
+      <button class="back-button" onclick="window.history.back()">Back</button>
+      <img src="${selectedMovie.poster_path}" alt="${selectedMovie.title}">
+      <div class="details">
+        <h1>${selectedMovie.title}</h1>
+        <p><strong>Release Date:</strong> ${selectedMovie.release_date}</p>
+        <p><strong>Rating:</strong> ${selectedMovie.vote_average}</p>
+        <p>${selectedMovie.overview}</p>
+      </div>
+    </div>
+  `;
+} else {
+  // Show error if no data is found
+  document.body.innerHTML = '<p>No movie data found. Please go back and select a movie.</p>';
+}
+
+  </script>
+</body>
+</html>

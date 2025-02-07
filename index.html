@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie DB</title>
     <link rel="stylesheet" href="src/style.css">
@@ -16,104 +17,28 @@
         </div>
         <div class="nav-links">
           <a href="#">Home</a>
-          <a href="#">Discover</a>
-          <a href="#">Movie release</a>
-          <a href="#">Forum</a>
-          <a href="#">About</a>
+          <a href="#">Details</a>
         </div>
-        <div class="nav-icons"></div>
+        <form id="form">
+          <input type="text" id="search" class="search" placeholder="search">
+        </form>
       </div>
     </header>
     <section class="hero">
-
       <div class="slider-container">
-        <div class="slider">
-          <img class="hero-slider" src="/src/assets/img/pexels-christian-heitz-285904-842711.jpg" alt="image01">
-          <div class="movie-details">
-            <a href="#">
-              season3
-            </a>
-            <h2>The Movie title</h2>
-            <p class="date">2h40m &bullet; 2022 &bullet; Fantasy &bullet; Action</p>
-            <p>
-              The third season of the American television series The Mandalorian stars Pedro Pascal
-              as the title character, a bounty hunter traveling to Mandalore to redeem his past...
-            </p>
-            <div class="action-buttons">
-              <button>Play Now</button>
-              <button>Watch Trailer</button>
-              <button>Add Watchlist</button>
-            </div>
-          </div>
-        </div>
+
+        
         <!--first slider-->
 
-        <div class="slider">
-          <img class="hero-slider" src="/src/assets/img/pexels-iriser-1366957.jpg" alt="image01">
-          <div class="movie-details">
-            <a href="#">
-              season3
-            </a>
-            <h2>The Movie title</h2>
-            <p class="date">2h40m &bullet; 2022 &bullet; Fantasy &bullet; Action</p>
-            <p>
-              The third season of the American television series The Mandalorian stars Pedro Pascal
-              as the title character, a bounty hunter traveling to Mandalore to redeem his past...
-            </p>
-            <div class="action-buttons">
-              <button>Play Now</button>
-              <button>Watch Trailer</button>
-              <button>Add Watchlist</button>
-            </div>
-          </div>
-        </div>
+        
         <!--first slider-->
 
-        <div class="slider">
-          <img class="hero-slider" src="/src/assets/img/pexels-og-mpango-1582361-3041110.jpg" alt="image01">
-          <div class="movie-details">
-            <a href="#">
-              season3
-            </a>
-            <h2>The Movie title</h2>
-            <p class="date">2h40m &bullet; 2022 &bullet; Fantasy &bullet; Action</p>
-            <p>
-              The third season of the American television series The Mandalorian stars Pedro Pascal
-              as the title character, a bounty hunter traveling to Mandalore to redeem his past...
-            </p>
-            <div class="action-buttons">
-              <button>Play Now</button>
-              <button>Watch Trailer</button>
-              <button>Add Watchlist</button>
-            </div>
-          </div>
-        </div>
-        <!--first slider-->
-
-        <div class="slider">
-          <img class="hero-slider" src="/src/assets/img/pexels-pixabay-33045.jpg" alt="image01">
-          <div class="movie-details">
-            <a href="#">
-              season3
-            </a>
-            <h2>The Movie title</h2>
-            <p class="date">2h40m &bullet; 2022 &bullet; Fantasy &bullet; Action</p>
-            <p>
-              The third season of the American television series The Mandalorian stars Pedro Pascal
-              as the title character, a bounty hunter traveling to Mandalore to redeem his past...
-            </p>
-            <div class="action-buttons">
-              <button>Play Now</button>
-              <button>Watch Trailer</button>
-              <button>Add Watchlist</button>
-            </div>
-          </div>
-        </div>
+        
         <!--first slider-->
 
         <!--Next and prev-->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(+1)">&#10094;</a>
       </div>
       <br>
 
@@ -135,7 +60,7 @@
       </div>
     </section>
 
-  <section class="popular">
+    <section class="popular">
       <div class="pop-title">
         <h2>Popular of the Week</h2>
       </div>
@@ -143,7 +68,7 @@
         <div class="pop-card">
           <div class="pop-num">
             <h2>1</h2>
-          </div>
+            </div>
           <div class="pop-img">
             <img src="./src/assets/img/pexels-christian-heitz-285904-842711.jpg" alt="The Last of Us">
           </div>
@@ -151,35 +76,40 @@
             <h3 class="card-title">The Last Of Us</h3>
             <div class="card-genre">Horror • Thriller</div>
             <div class="rating">
-              ★ 4.3 <span>| Movie</span>
+              &#9733; 4.3 <span>| Movie</span>
             </div>
           </div>
         </div>  
       </div>
     </section> 
-    <section id="new-release" class="just-release">
-      <h2>Just-release</h2>
-      <div id="movie01" class="just-release-movie"></div>
 
-    </section>
-    <section class="your watchlist">
-      <h2>your watchlist</h2>
-      <div class="movie-container">
-        <div id = "movie02" class="movie-slider">
-          
-        </div>
+    <!--Just Release section-->
+    <section class="just-releas">
+      <h2>Just released</h2>
+      <div class="cards">
+        <!-- <div class="card releas">
+          <img src="./src/assets/img/pexels-iriser-1379636.jpg" alt="anystuf">
+          <div class="releas-det">
+            <h4>title</h4>
+            <div class="releas-rating"> 7.3</div>
+            <div class="like-icon"> $</div>
+          </div>
+        </div> -->
       </div>
     </section>
-    <section class="like">
-      <h2>Your Likes</h2>
-      <div class="movie-slider03">
-        <button id="prevBtn" class="nav-btn">&#10094;</button>
-        <div class="movie-container03">
-          <div id="movie03" class="your-likes">
-            <!-- Movie cards will be dynamically added here -->
-          </div>
+
+    <!--Your watchlist-->
+    <section class="you-watchlist">
+      <h2>Your watchlist</h2>
+      <div class="card watchlist">
+        <div class="watchlist-img">
+          <img src="./src/assets/img/pexels-eberhardgross-691668.jpg" alt="gross">
         </div>
-        <button id="nextBtn" class="nav-btn">&#10095;</button>
+        <div class="watchlist-det">
+          <h4>Title</h4>
+          <span class="rating"> 5.4</span>
+          <span class="like-icon"> $</span>
+        </div>
       </div>
     </section>
 
@@ -190,12 +120,24 @@
             Our platform is trusted by millions & features best updated movies all around the world.
           </h4>
         </div>
-        <div class="footer-righ"></div>
+        <div class="footer-righ">
+          <div class="footer-nav">
+            <ul>
+              <li>Home</li>
+              <li>Discover</li>
+              <li>influence</li>
+              <li>release</li>
+            </ul>
+          </div>
+          <div class="social-icons">
+
+          </div>
+        </div>
       </div>
       <div class="copy-right">
-
+        <div class="policy"></div>
+        <div class="date"></div>
       </div>
     </footer>
     <script type="module" src="src/main.js"></script>
   </body>
-</html>

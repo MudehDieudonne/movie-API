@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #21d07a;
+  --secondary-color: #1a1a1a;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #0f0f0f;
+  background-color: #000000;
   color: white;
   overflow-x: hidden;
 }
@@ -41,7 +46,7 @@ header {
   background-color: #1eff00;
 }
 
-.light-green{
+.light-green {
   background-color: #c3ffb5;
 }
 
@@ -50,9 +55,28 @@ header {
   text-decoration: none;
   margin: 0 1rem;
   font-size: 1rem;
-  display: none;
 }
 
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.search::placeholder {
+  color: #fff;
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+/* hero sec */
 .hero {
   position: relative;
   width: 100%;
@@ -70,12 +94,8 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0;
   transition: opacity 1s ease-in-out;
-}
-
-.hero-slider {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  opacity: 0;
 }
 
 .slider.active {
@@ -96,11 +116,18 @@ header {
   bottom: 0%;
   padding: 0 0 3% 3.5%;
   color: white;
+  a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #020202b5;
+    padding: 0.4em;
+    border-radius: 15px;
+}
 }
 
 .movie-details h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
 }
 
 .movie-details p {
@@ -120,7 +147,6 @@ header {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
-
 }
 
 .action-buttons {
@@ -153,7 +179,194 @@ header {
   background-color: #21d07a;
 }
 
-/* sponsore sec */
+/* Popular sec */
+section.popular {
+  padding: 1em;
+  margin: 0.3em 2em;
+}
+
+.pop-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+.pop-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  display: flex;
+  height: 10em;
+  justify-content: space-evenly;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pop-num {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  padding: 0.5em;
+}
+
+.pop-img {
+  width: 8em;
+  height: 10em;
+}
+
+.pop-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+
+.pop-title {
+  margin-bottom: 1em;
+}
+
+.card-content {
+  padding: 0.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+h3.card-title {
+  padding: 0.2em;
+}
+
+.card-genre {
+  padding: 0.2em;
+}
+
+.rating {
+  padding: 0.2em;
+}
+
+.pop-card:hover {
+  transform: scale(1.05);
+}
+
+.green {
+  color: #21d07a;
+}
+
+.orange {
+  color: #ff9f00;
+}
+
+.red {
+  color: #ff0000;
+}
+
+/* Just Release section */
+/* Just Released section */
+.just-releas {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5em;
+  margin-right: 2.5em; /* Add right margin for consistency */
+  padding: 1em 0; /* Add padding for spacing */
+}
+
+.cards {
+  display: flex;
+  gap: 20px; /* Add gap between cards */
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Use overflow-x for horizontal scrolling */
+  padding-bottom: 10px; /* Add padding to avoid scrollbar overlap */
+}
+
+.releas {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto; /* Ensure cards don't shrink or grow */
+}
+
+.releas img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.releas-det {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5em; /* Increase padding for better readability */
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+}
+
+.releas-det h4 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.releas-rating {
+  font-size: 0.9em;
+  color: var(--primary-color); /* Use the primary color for consistency */
+}
+
+.like-icon {
+  position: absolute;
+  right: 0.5em;
+  bottom: 0.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Your Watchlist section */
+.you-watchlist {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5em;
+  padding: 1em 0;
+}
+
+.watchlist {
+  display: flex;
+  width: 300px;
+  height: 270px;
+  gap: 20px;
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+}
+
+.watch-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 260px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+  flex: 0 0 auto; /* Ensure cards don't shrink or grow */
+}
+
+.card-img {
+  height: 75%;
+  border-radius: 5px;
+  overflow: hidden;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.card-details {
+  padding: 0.5em;
+}
+
+/* Sponsors section */
 .sponsore-img {
   display: flex;
   justify-content: space-evenly;
@@ -167,196 +380,34 @@ header {
   width: 90px;
 }
 
-/* Popular sec */
-    /* Movie Cards Layout */
-.pop-cards {
+/* footer */
+footer {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  border-top: #666;
 }
 
-.pop-card {
-  background-color: #1a1a1a;
-  border-radius: 10px;
+.footer-content {
   display: flex;
-  justify-content: space-evenly;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
+  align-content: center;
+  padding: 0.3em;
 }
 
-.pop-num {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
+.footer-left {
+  width: 50%;
   font-size: 2em;
-  padding: 0.2em;
-}
-.pop-img {
-  width: 7em;
-  height: 7em;
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
+  text-align: left;
+  padding: 0.9em;
 }
 
-.pop-card:hover {
-  transform: scale(1.05);
+.footer-right {
+  width: 50%;
 }
 
-.rating span {
-  color: #fff;
-  font-size: 0.8rem;
-}
-
-/* .just-release */
-.just-release {
-  position: relative;
-  overflow: scroll;
-  margin: 0.2em 3em;
-  h2{
-    border-bottom: 1px solid #21d07a;
-  }
-}
-
-.just-release-movie {
+.footer-nav ul {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.movie-card {
-  min-width: 260px;
-  margin: 1rem;
-  border-radius: 5%;
-  position: relative;
-}
-
-.movie-card img {
-  width: 100%;
-  height: 79%;
-  border-radius: 5%;
-  object-fit: cover;
-}
-
-.movie-det {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.movie-det h4 {
-  margin: 0;
-}
-
-.movie-det span {
-  display: block;
-  margin: 0.5rem 0;
-}
-
-/* secound slider */
-.movie-container {
-  max-width: 1200px;
-  margin: 40px auto;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-}
-
-.movie-slider {
-  display: flex;
-  overflow-x:  auto;
-  scroll-behavior: smooth;
-}
-
-.movie-card .movie-info h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.movie-card .movie-info h2 {
-  font-size: 14px;
-  color: #666;
-}
-
-/* section 03 */
-.like {
-  text-align: center;
-  margin: 20px;
-}
-
-.movie-slider03 {
-  position: relative;
-  overflow: hidden;
-  max-width: 98%;
-  margin: 0;
-}
-
-.movie-container03 {
-  display: flex;
-  transition: transform 3s ease-in-out;
-  gap: 20px ;
-}
-
-.your-likes {
-  display: flex;
-}
-
-.movie-card03 {
-  min-width: 200px;
-  /* background-color: #f5f5f5; */
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
-.movie-card03 img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10%;
-}
-
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-  z-index: 10;
-}
-
-#prevBtn {
-  left: 10px;
-}
-
-#nextBtn {
-  right: 10px;
-}
-
-.nav-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-@media (max-width: 768px) {
-  .movie-card {
-    flex: 0 0 calc(98% / 2 - 20px); /* Mobile: Show ~2 cards */
-    min-width: calc(98% / 2 - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .movie-card {
-    flex: 0 0 calc(98% - 20px); /* Small Mobile: Show ~1 card */
-    min-width: calc(98% - 20px);
-  }
+  gap: 1em;
+  padding: 0.9em;
+  list-style: none;
+  font-size: 1.3em;
 }
