@@ -3,13 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Movie DB</title>
     <link rel="stylesheet" href="src/style.css">
   </head>
   <body>
-    <h1>hello boy</h1>
-    <div id="app"></div>
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <div class="logo-circle green"></div>
+          <div class="logo-circle light-green"></div>
+        </div>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Details</a>
+        </div>
+        <form id="form">
+          <input type="text" id="search" class="search" placeholder="search">
+        </form>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="slider-container">
+
+        
+        <!--first slider-->
+
+        
+        <!--first slider-->
+
+        
+        <!--first slider-->
+
+        <!--Next and prev-->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(+1)">&#10094;</a>
+      </div>
+      <br>
+
+      <!--DOt circles-->
+      <div class="slide-circle">
+        <span class="dot" onclick="currentSlider(1)"></span>
+        <span class="dot" onclick="currentSlider(2)"></span>
+        <span class="dot" onclick="currentSlider(3)"></span>
+        <span class="dot" onclick="currentSlider(4)"></span>
+      </div>
+    </section>
+
+    <section class="sponsores">
+      <div class="sponsore-img">
+        <img class="sponsore" src="/src/assets/img/netflix.png" alt="netflix">
+        <img class="sponsore" src="/src/assets/img/microsoft.png" alt="mksoft">
+        <img class="sponsore" src="/src/assets/img/twitter.png" alt="twist">
+        <img class="sponsore" src="/src/assets/img/slack.png" alt="slack">
+      </div>
+    </section>
+
+    <section class="popular">
+      <div class="pop-title">
+        <h2>Popular of the Week</h2>
+      </div>
+      <div class="pop-cards">
+        <div class="pop-card">
+          <div class="pop-num">
+            <h2>1</h2>
+            </div>
+          <div class="pop-img">
+            <img src="./src/assets/img/pexels-christian-heitz-285904-842711.jpg" alt="The Last of Us">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">The Last Of Us</h3>
+            <div class="card-genre">Horror • Thriller</div>
+            <div class="rating">
+              &#9733; 4.3 <span>| Movie</span>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </section> 
+
+    <!--Just Release section-->
+    <section class="just-releas">
+      <h2>Just released</h2>
+      <div class="cards">
+        <!-- <div class="card releas">
+          <img src="./src/assets/img/pexels-iriser-1379636.jpg" alt="anystuf">
+          <div class="releas-det">
+            <h4>title</h4>
+            <div class="releas-rating"> 7.3</div>
+            <div class="like-icon"> $</div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!--Your watchlist-->
+    <section class="you-watchlist">
+      <h2>Your watchlist</h2>
+      <div class="card watchlist">
+        <div class="watchlist-img">
+          <img src="./src/assets/img/pexels-eberhardgross-691668.jpg" alt="gross">
+        </div>
+        <div class="watchlist-det">
+          <h4>Title</h4>
+          <span class="rating"> 5.4</span>
+          <span class="like-icon"> $</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h4>
+            Our platform is trusted by millions & features best updated movies all around the world.
+          </h4>
+        </div>
+        <div class="footer-righ">
+          <div class="footer-nav">
+            <ul>
+              <li>Home</li>
+              <li>Discover</li>
+              <li>influence</li>
+              <li>release</li>
+            </ul>
+          </div>
+          <div class="social-icons">
+
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        <div class="policy"></div>
+        <div class="date"></div>
+      </div>
+    </footer>
     <script type="module" src="src/main.js"></script>
   </body>
-</html>
