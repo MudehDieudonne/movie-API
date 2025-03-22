@@ -260,22 +260,21 @@ h3.card-title {
   color: #ff0000;
 }
 
-/* Just Release section */
 /* Just Released section */
 .just-releas {
   display: flex;
   flex-direction: column;
   margin-left: 2.5em;
-  margin-right: 2.5em; /* Add right margin for consistency */
-  padding: 1em 0; /* Add padding for spacing */
+  margin-right: 2.5em;
+  padding: 1em 0;
 }
 
 .cards {
   display: flex;
-  gap: 20px; /* Add gap between cards */
+  gap: 20px;
   flex-wrap: nowrap;
-  overflow-x: auto; /* Use overflow-x for horizontal scrolling */
-  padding-bottom: 10px; /* Add padding to avoid scrollbar overlap */
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 .releas {
@@ -284,7 +283,7 @@ h3.card-title {
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  flex: 0 0 auto; /* Ensure cards don't shrink or grow */
+  flex: 0 0 auto;
 }
 
 .releas img {
@@ -297,7 +296,7 @@ h3.card-title {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 0.5em; /* Increase padding for better readability */
+  padding: 0.5em;
   position: absolute;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   color: white;
@@ -310,7 +309,7 @@ h3.card-title {
 
 .releas-rating {
   font-size: 0.9em;
-  color: var(--primary-color); /* Use the primary color for consistency */
+  color: var(--primary-color);
 }
 
 .like-icon {
@@ -327,6 +326,7 @@ h3.card-title {
   flex-direction: column;
   margin-left: 2.5em;
   padding: 1em 0;
+  overflow-x: scroll;
 }
 
 .watchlist {
@@ -343,12 +343,11 @@ h3.card-title {
   flex-direction: column;
   width: 300px;
   height: 260px;
-  overflow: hidden;
   background-color: #1a1a1a;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
-  flex: 0 0 auto; /* Ensure cards don't shrink or grow */
+  flex: 0 0 auto;
 }
 
 .card-img {
